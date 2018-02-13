@@ -3,8 +3,14 @@ NanoBlog
 
 A sample Symfony project to create a Nano Blog. [![Build Status](https://travis-ci.org/ismailatkurt/test-nano-blog.svg?branch=master)](https://travis-ci.org/ismailatkurt/test-nano-blog)
 
+### Clone Repo
+```
+git clone https://github.com/ismailatkurt/nano-blog.git NanoBlog
+```
+
 ### Install dependencies
 ```
+cd NanoBlog
 composer install
 ```
 
@@ -24,6 +30,12 @@ php bin/console doctrine:schema:update --force
 ### Create admin user
 ```
 php bin/console fos:user:create testuser test@example.com password --super-admin
+```
+
+### Insert "languages"
+```
+INSERT INTO nano_blog.language (name) VALUES ('en');
+INSERT INTO nano_blog.language (name) VALUES ('de');
 ```
 
 ### Start server
