@@ -6,7 +6,6 @@ services:
 before_install:
   - composer self-update
   - composer clear-cache
-  - composer install --no-interaction --no-ansi --no-suggest --optimize-autoloader --prefer-stable
 script:
   - composer install
   - php vendor/phpunit/phpunit/phpunit --bootstrap tests/unittests/Bootstrap.php --configuration tests/unittests/phpunit.xml tests/unittests/src --teamcity
