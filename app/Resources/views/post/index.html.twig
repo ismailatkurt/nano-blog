@@ -22,7 +22,7 @@
                         {% endif %}
                     </h2>
                     <div class="excerpt">
-                        {{ post.content|slice(0, 200) ~ '...' }}
+                        {% autoescape %}{{ (post.content|striptags)|slice(0, 200) ~ '...' }}{% endautoescape %}
                         <a class="read-more" href="{{ path('show-post', {'slug': post.slug}) }}"></a>
                     </div>
                     <div class="clear"></div>
