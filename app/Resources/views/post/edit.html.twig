@@ -20,7 +20,8 @@
                 <div class="form-group">
                     <div class="fr-view">
                         <label for="content">Content:</label>
-                        <textarea id="content" name="content" class="form-control">{{ post.content }}</textarea>
+                        {{ tinymce_init() }}
+                        <textarea class="tinymce" name="content">{{ post.content }}</textarea>
                     </div>
                 </div>
 
