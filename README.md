@@ -1,13 +1,12 @@
 NanoBlog
 ========
 
-A sample Symfony project to create a Nano Blog.
+A sample Symfony project to create a Nano Blog. [![Build Status](https://travis-ci.org/ismailatkurt/test-nano-blog.svg?branch=master)](https://travis-ci.org/ismailatkurt/test-nano-blog)
 
 ### Install dependencies
 ```
 composer install
 ```
-
 
 ### Create MySql Database & User & Grant Privileges
 
