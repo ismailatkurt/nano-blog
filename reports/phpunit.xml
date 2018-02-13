@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="tests/unittests/src" tests="12" assertions="51" failures="0" errors="0" time="0.607922">
+    <testsuite name="AppBundle\AppBundleTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/AppBundleTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.021900">
+      <testcase name="instance_test" class="AppBundle\AppBundleTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/AppBundleTest.php" line="13" assertions="1" time="0.021900"/>
+    </testsuite>
+    <testsuite name="AppBundle\Controller\PostControllerTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Controller/PostControllerTest.php" tests="6" assertions="37" failures="0" errors="0" time="0.448429">
+      <testcase name="index_test" class="AppBundle\Controller\PostControllerTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Controller/PostControllerTest.php" line="24" assertions="6" time="0.303621"/>
+      <testcase name="createAction_test" class="AppBundle\Controller\PostControllerTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Controller/PostControllerTest.php" line="98" assertions="6" time="0.020652"/>
+      <testcase name="saveAction_test" class="AppBundle\Controller\PostControllerTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Controller/PostControllerTest.php" line="172" assertions="9" time="0.071327"/>
+      <testcase name="show_test" class="AppBundle\Controller\PostControllerTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Controller/PostControllerTest.php" line="264" assertions="6" time="0.015408"/>
+      <testcase name="edit_test" class="AppBundle\Controller\PostControllerTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Controller/PostControllerTest.php" line="338" assertions="6" time="0.020153"/>
+      <testcase name="updateAction_test" class="AppBundle\Controller\PostControllerTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Controller/PostControllerTest.php" line="422" assertions="4" time="0.017268"/>
+    </testsuite>
+    <testsuite name="AppBundle\Entity\LanguageTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Entity/LanguageTest.php" tests="1" assertions="2" failures="0" errors="0" time="0.001136">
+      <testcase name="gettersSetter_test" class="AppBundle\Entity\LanguageTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Entity/LanguageTest.php" line="12" assertions="2" time="0.001136"/>
+    </testsuite>
+    <testsuite name="AppBundle\Entity\PostTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Entity/PostTest.php" tests="1" assertions="8" failures="0" errors="0" time="0.025191">
+      <testcase name="gettersSetter_test" class="AppBundle\Entity\PostTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Entity/PostTest.php" line="12" assertions="8" time="0.025191"/>
+    </testsuite>
+    <testsuite name="AppBundle\Entity\UserTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Entity/UserTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.001081">
+      <testcase name="instance_test" class="AppBundle\Entity\UserTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Entity/UserTest.php" line="12" assertions="1" time="0.001081"/>
+    </testsuite>
+    <testsuite name="AppBundle\Repository\LanguageRepositoryTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Repository/LanguageRepositoryTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.107972">
+      <testcase name="instance_test" class="AppBundle\Repository\LanguageRepositoryTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Repository/LanguageRepositoryTest.php" line="14" assertions="1" time="0.107972"/>
+    </testsuite>
+    <testsuite name="AppBundle\Repository\PostRepositoryTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Repository/PostRepositoryTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.002213">
+      <testcase name="instance_test" class="AppBundle\Repository\PostRepositoryTest" file="/Users/ismail.atkurt/Code/Serious/iFunded/NanoBlog/tests/unittests/src/AppBundle/Repository/PostRepositoryTest.php" line="14" assertions="1" time="0.002213"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

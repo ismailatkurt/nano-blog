@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'partials/head.html.twig' %}
+    <style>
+        .sidebar {
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body class="home blog">
+
+<!-- Preloader Gif -->
+<table class="doc-loader">
+    <tbody>
+    <tr>
+        <td>
+            <img src="/assets/images/ajax-document-loader.gif" alt="Loading...">
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+{% include 'partials/sidebar.html.twig' %}
+
+<!-- Home Content -->
+<div id="content" class="site-content">
+    <div id="blog-wrapper">
+        <div class="blog-holder center-relative">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+{% include 'partials/scripts.html.twig' %}
+
+{% block scripts %}{% endblock %}
+</body>
+</html>

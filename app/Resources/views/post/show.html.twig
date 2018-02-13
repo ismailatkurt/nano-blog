@@ -1,0 +1,41 @@
+{% use 'IvoryCKEditorBundle:Form:ckeditor_widget.html.twig' %}
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            {{ post.title }}
+            <hr/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <article>
+                <p>
+                    {{ post.content }}
+                </p>
+                <hr/>
+            </article>
+        </div>
+    </div>
+    {% if post.translatedPost is not empty %}
+        <div class="row">
+            <div class="col-md-12">
+                Translation in {{ post.translatedPost.language.name }}
+                <a href="#" class="read-more"></a>
+                <a href="/{{ post.translatedPost.language.name }}/admin/posts/{{ post.translatedPost.slug }}">
+                    {{ post.translatedPost.title }}
+                </a>
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        $('.content').froalaEditor();
+    </script>
+{% endblock %}

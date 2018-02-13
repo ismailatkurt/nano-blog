@@ -1,0 +1,32 @@
+.languages {
+    position: fixed;
+    bottom: 0;
+    width: 100px;
+    text-align: center;
+}
+
+.languages a {
+    color: #ffffff;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+}
+
+#blog-wrapper {
+    margin-top: 0px;
+    width: 100%;
+}
+
+.blog-holder{
+    max-width: 100%;
+}
+
+.blog-item-holder {
+    max-width: 100%;
+    border-bottom: #242424 1px solid;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.entry-content {
+    width: 100%;
+}

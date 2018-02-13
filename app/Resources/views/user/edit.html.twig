@@ -1,0 +1,65 @@
+{% use 'IvoryCKEditorBundle:Form:ckeditor_widget.html.twig' %}
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            Create new User
+            <hr/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <form role="form" action="{{ path("update-user", {'id':user.id}) }}" method="post">
+
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" name="username" value="{{ user.username }}"
+                           required/>
+                </div>
+                <div class="form-group">
+                    <div class="fr-view">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" value="{{ user.email }}"
+                               required/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="fr-view">
+                        <label for="password">Password:</label>
+                        <input type="text" class="form-control" id="password" name="password"/>
+                    </div>
+                </div>
+
+                {{ user.roles|join(',') }}
+                <div class="form-group">
+                    <label for="role">Role:</label>
+                    <select id="role" multiple name="role[]" class="form-control" required>
+                        {% for key, role in roles %}
+                            <option value="{{ key }}"
+                                    {% if role in user.roles %}
+                                        selected
+                                    {% endif %}
+                            >{{ role }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <hr/>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        //        $('.content').froalaEditor();
+    </script>
+{% endblock %}

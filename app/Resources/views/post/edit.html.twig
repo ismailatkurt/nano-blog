@@ -1,0 +1,56 @@
+{% use 'IvoryCKEditorBundle:Form:ckeditor_widget.html.twig' %}
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            Create new Post
+            <hr/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <form role="form" action="{{ path("update-post", {'id': post.id}) }}" method="post">
+
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" name="title" value="{{ post.title }}">
+                </div>
+                <div class="form-group">
+                    <div class="fr-view">
+                        <label for="content">Content:</label>
+                        <textarea id="content" name="content" class="form-control">{{ post.content }}</textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="translationOfPost">Translated from (Select post):</label>
+                    <select id="translationOfPost" name="translationOfPost" class="form-control">
+                        <option value="">None</option>
+                        {% for postForTranslation in posts %}
+                            <option value="{{ postForTranslation.id }}"
+                                    {% if postForTranslation and post.translatedPost and postForTranslation.id == post.translatedPost.id %}
+                            selected
+                                    {% endif %}>{{ postForTranslation.title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <hr/>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        //        $('.content').froalaEditor();
+    </script>
+{% endblock %}

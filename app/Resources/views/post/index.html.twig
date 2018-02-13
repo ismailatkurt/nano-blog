@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    {% for post in posts %}
+        {#{{ app.user }}#}
+        <article id="post-1" class="blog-item-holder">
+            <div class="entry-content relative">
+                <div class="content-1170 center-relative">
+                    <div class="cat-links">
+                        <ul>
+                            <li>
+                                <a href="#">{{ post.author.username }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="entry-date published">{{ post.createdAt|date('M d Y') }}</div>
+                    <h2 class="entry-title">
+                        <a href="{{ path('show-post', {'slug': post.slug}) }}">{{ post.title }}</a>
+                        {% if(app.user.hasRole('ROLE_SUPER_ADMIN')) %}
+                            <a href="{{ path('edit-post', {'slug': post.slug}) }}"> <small>-- Edit --</small></a>
+                        {% endif %}
+                    </h2>
+                    <div class="excerpt">
+                        {{ post.content|slice(0, 200) ~ '...' }}
+                        <a class="read-more" href="{{ path('show-post', {'slug': post.slug}) }}"></a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </article>
+    {% endfor %}
+
+{% endblock %}

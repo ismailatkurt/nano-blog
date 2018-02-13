@@ -1,0 +1,58 @@
+<!-- Left Sidebar -->
+<div id="sidebar" class="sidebar">
+    <div class="menu-left-part">
+        <div class="search-holder">
+            <label>
+                <input type="search" class="search-field" placeholder="Type here to search..." value="" name="s"
+                       title="Search for:">
+            </label>
+        </div>
+        <div class="site-info-holder">
+            <h1 class="site-title">Suppablog</h1>
+            <p class="site-description">
+                Suppablog is simple and yet cool wordpress theme to lorem ipsum dolor sit.
+            </p>
+        </div>
+        <nav id="header-main-menu">
+            <ul class="main-menu sm sm-clean">
+                <li><a href="{{ path('posts') }}" class="current">Posts</a></li>
+                <li><a href="{{ path('users') }}" class="current">Users</a></li>
+                <li><a href="{{ path("logout") }}">Sign Out</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <div class="footer-info">
+                © 2018 SUPPABLOG HTML TEMPLATE. <br> CRAFTED WITH <i class="fa fa-heart"></i> BY <a
+                        href="https://colorlib.com">COLORLIB</a>.
+            </div>
+        </footer>
+    </div>
+    <div class="menu-right-part">
+        <div class="logo-holder">
+            <a href="/admin/blog-posts">
+                <img src="/assets/images/logo.png" alt="Suppablog WP">
+            </a>
+        </div>
+        <div class="toggle-holder">
+            <div id="toggle">
+                <div class="menu-line"></div>
+            </div>
+        </div>
+        <div class="social-holder">
+            <div class="social-list">
+                <a href="{{ path("posts") }}"><i class="fa fa-list-ul"></i></a>
+                {% if(app.user.hasRole('ROLE_SUPER_ADMIN')) %}
+                    <a href="{{ path("create-post") }}"><i class="fa fa-plus"></i></a>
+                    <a href="{{ path("users") }}"><i class="fa fa-user"></i></a>
+                {% endif %}
+                <a href="{{ path("logout") }}"><i class="fa fa-sign-out"></i></a>
+            </div>
+        </div>
+        <div class="languages">
+            <a href="/en{{ app.request.getPathInfo()|slice(3) }}">EN /</a>
+            <a href="/de{{ app.request.getPathInfo()|slice(3) }}">DE</a>
+        </div>
+        <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
+    </div>
+    <div class="clear"></div>
+</div>
