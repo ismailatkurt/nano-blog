@@ -1,7 +1,7 @@
 NanoBlog
 ========
 
-A sample Symfony project to create a Nano Blog. [![Build Status](https://travis-ci.org/ismailatkurt/test-nano-blog.svg?branch=master)](https://travis-ci.org/ismailatkurt/test-nano-blog)
+A sample Symfony project to create a Nano Blog. [![Build Status](https://travis-ci.org/ismailatkurt/nano-blog.svg?branch=master)](https://travis-ci.org/ismailatkurt/nano-blog)
 
 ### Clone Repo
 ```
