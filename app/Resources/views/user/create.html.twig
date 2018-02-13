@@ -30,16 +30,11 @@
                     </div>
                 </div>
 
-                {{ user.roles|join(',') }}
                 <div class="form-group">
                     <label for="role">Role:</label>
                     <select id="role" multiple name="role" class="form-control" required>
                         {% for key, role in roles %}
-                            <option value="{{ key }}"
-                                    {% if key in user.roles|keys %}
-                                        selected
-                                    {% endif %}
-                            >{{ role }}</option>
+                            <option value="{{ key }}">{{ role }}</option>
                         {% endfor %}
                     </select>
                 </div>
